@@ -1,0 +1,7 @@
+name="aerrow-proxy"
+organization="Joyent"
+brand="Instance"
+version="1.0.0"
+description="Description for image aerrow-proxy"
+homepage="http://wiki.joyent.com/jpc2/aerrow-proxy+Instance"
+users="root admin"
