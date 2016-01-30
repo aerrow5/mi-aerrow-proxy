@@ -1,3 +1,16 @@
 # List packages to add to your image one per line.
-dtracetools
-htop
+# dont like vim
+nano
+# additional tools
+diffutils
+# transport:
+curl
+wget
+# other:
+grep
+gsed
+# mailhandling
+nullmailer
+# colorlog + remote logging
+ccze
+rsyslog

@@ -7,20 +7,21 @@ PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 # Exit if any commands fail
 set -o errexit
 
-# Ensure we have updated standard packages
-echo "* Updating standard packages.";
-pkg_delete -v nodejs smtools zoneinit
-pkg_add -v nodejs smtools zoneinit
-npm install smartdc -g
-npm install jsontool -g
-npm install manta -g
-
 # Configuring image specific packages
 echo "* Configuring image specific packages.";
+
+# standard pkgin update:
+pkg_admin rebuild
+pkgin -y up
+pkgin -y clean
+
+echo "* Create rsyslog.d folder for extra configuration files"
+mkdir -p /opt/local/etc/rsyslog.d
 
 # Clean up
 echo "* Cleaning up."
 rm -rf /root/*
+rm -rf /tmp/*
 
 # Prepare image for provisioning
 sm-prepare-image -y
