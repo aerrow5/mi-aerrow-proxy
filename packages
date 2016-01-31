@@ -1,19 +1,19 @@
 # List packages to add to your image one per line.
 # dont like vim
-nano
+#nano
 # additional tools
-diffutils
+#diffutils
 # transport:
-curl
-wget
+#curl
+#wget
 # other:
-grep
-gsed
+#grep
+#gsed
 # mailhandling
-nullmailer
+#nullmailer
 # colorlog + remote logging
-ccze
-rsyslog
+#ccze
+#rsyslog
 # webservers and proxy
 nginx
 haproxy
