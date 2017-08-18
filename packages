@@ -4,6 +4,7 @@ nano
 # additional tools
 diffutils
 htop
+logcheck
 # transport:
 curl
 wget
@@ -18,3 +19,12 @@ rsyslog
 # webservers and proxy
 nginx
 haproxy
+# munin monitoring
+munin-common
+munin-node
+p5-Net-CIDR
+p5-LWP-UserAgent-Determined
+p5-Switch
+# rsync & sftp server
+rsync
+proftpd
