@@ -10,8 +10,8 @@ wget
 # other:
 grep
 gsed
-# mailhandling
-nullmailer
+# mailhandling / disabled
+## nullmailer
 # colorlog + remote logging
 ccze
 rsyslog
