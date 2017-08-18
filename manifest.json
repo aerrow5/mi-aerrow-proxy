@@ -3,6 +3,6 @@
   "version":      "17.2.0",
   "description":  "Proxy server with ngix webserver and haproxy frontdoor",
   "organization": "Artned",
-  "brand":        "Artned",
+  "brand":        "Instance",
   "homepage":     "http://www.artned.org/"
 }
