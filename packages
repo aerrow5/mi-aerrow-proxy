@@ -1,20 +1,20 @@
 # List packages to add to your image one per line.
-# prefixes with ### are already installed via mi-aerrow-base
 # dont like vim
-###nano
+nano
 # additional tools
-###diffutils
+diffutils
+htop
 # transport:
-###curl
-###wget
+curl
+wget
 # other:
-###grep
-###gsed
+grep
+gsed
 # mailhandling
-###nullmailer
+nullmailer
 # colorlog + remote logging
-###ccze
-###rsyslog
+ccze
+rsyslog
 # webservers and proxy
 nginx
-###haproxy
+haproxy
