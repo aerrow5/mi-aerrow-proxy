@@ -4,6 +4,17 @@
 
 PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 
+# Munin plugins
+MUNIN_PLUGINS="
+	nginx_request
+	nginx_status
+	haproxy_
+	haproxy_ng
+  proftpd
+	proftpd_bytes
+	proftpd_count
+"
+
 # Exit if any commands fail
 set -o errexit
 
@@ -17,6 +28,18 @@ pkgin -y clean
 
 echo "* Create rsyslog.d folder for extra configuration files"
 mkdir -p /opt/local/etc/rsyslog.d
+
+# Get acmetool for Let's Encrypt certificates
+echo "* Install Let's Encrypt certificates"
+acmetool_version=v0.0.62
+curl -LO https://github.com/hlandau/acme/releases/download/${acmetool_version}/acmetool-${acmetool_version}-solaris_amd64.tar.gz && tar xvzf acmetool-${acmetool_version}-solaris_amd64.tar.gz
+cd acmetool-${acmetool_version}-solaris_amd64
+cp bin/acmetool /opt/local/bin/acmetool.real
+cd ..
+rm -rf acmetool-${acmetool_version}-solaris_amd64.tar.gz acmetool-${acmetool_version}-solaris_amd64
+
+echo "* Activate munin plugins"
+/opt/local/bin/munin-node-plugins ${MUNIN_PLUGINS}
 
 # Clean up
 echo "* Cleaning up."
