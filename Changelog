@@ -1,4 +1,9 @@
 # Changelog for mi-aerrow-proxy
 
+aerrow-proxy-17.3.0
+* Update to 2017Q3 packages
+* install acmetool
+* install haproxy/nginx/rsync/sftp services
+
 aerrow-proxy-15.3.0
 * Init
