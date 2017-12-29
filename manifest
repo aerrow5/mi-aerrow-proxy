@@ -1,7 +1,7 @@
 name="aerrow-proxy"
 organization="Artned"
 brand="Instance"
-version="17.2.0"
+version="17.3.0"
 description="Web and proxy SmartOS server"
 homepage="http://www.artned.org"
 users="root admin"
