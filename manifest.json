@@ -1,6 +1,6 @@
 {
   "name":         "aerrow-proxy",
-  "version":      "17.2.0",
+  "version":      "17.3.0",
   "description":  "Proxy server with nginx webserver and haproxy frontdoor",
   "organization": "Artned",
   "brand":        "Instance",
