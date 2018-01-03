@@ -26,6 +26,11 @@ pkg_admin rebuild
 pkgin -y up
 pkgin -y clean
 
+echo "* Create users & groups"
+groupadd -g 1000 inet
+useradd -g www ssh
+useradd -d /ftp/rsync -c "Weewx backup subdir" -g inet rsync
+
 echo "* Create rsyslog.d folder for extra configuration files"
 mkdir -p /opt/local/etc/rsyslog.d
 
