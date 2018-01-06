@@ -11,3 +11,38 @@ p5-Switch
 # rsync & sftp server
 rsync
 proftpd
+# required for phpmyadmin
+expat 
+giflib 
+libjpeg-turbo 
+jbigkit 
+tiff 
+png 
+libwebp 
+libimagequant 
+freetype2 
+fontconfig 
+gd 
+libmcrypt 
+# skip installation, as it creates errors during building vm:
+#php56 
+php56-zlib 
+php56-zip 
+php56-mysqli 
+php56-mcrypt 
+php56-mbstring 
+php56-json 
+php56-json 
+php56-gettext 
+php56-gd 
+php56-bz2
+# expected extras:
+php56-xmlrpc 
+php56-pdo 
+php56-pdo_mysql 
+php56-mysql 
+php56-intl 
+php56-iconv 
+php56-fpm 
+php56-curl 
+php56-bcmath
