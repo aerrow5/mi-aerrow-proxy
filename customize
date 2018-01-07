@@ -28,13 +28,13 @@ pkgin -y clean
 
 echo "* Create users & groups"
 groupadd -g 1000 inet
-useradd -g www ssh
+useradd -d /home/ssh -c "ssh login for rsync" -g www ssh
 useradd -d /ftp/rsync -c "Weewx backup subdir" -g inet rsync
 
 echo "* Create rsyslog.d folder for extra configuration files"
 mkdir -p /opt/local/etc/rsyslog.d
 
-# Get acmetool for Let's Encrypt certificates
+# Install acmetool for Let's Encrypt certificates
 echo "* Install Let's Encrypt certificates"
 acmetool_version=v0.0.62
 curl -LO https://github.com/hlandau/acme/releases/download/${acmetool_version}/acmetool-${acmetool_version}-solaris_amd64.tar.gz && tar xvzf acmetool-${acmetool_version}-solaris_amd64.tar.gz

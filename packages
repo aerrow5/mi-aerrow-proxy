@@ -9,7 +9,7 @@ p5-Net-CIDR
 p5-LWP-UserAgent-Determined
 p5-Switch
 # rsync & sftp server
-rsync
+# rsync [skipped: ssh is enough]
 proftpd
 # required for phpmyadmin
 expat 
