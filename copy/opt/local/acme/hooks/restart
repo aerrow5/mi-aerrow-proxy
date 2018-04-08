@@ -1,0 +1,7 @@
+#!/bin/sh
+
+SERVICES="haproxy"
+
+for service in ${SERVICES}; do
+   svcadm restart $service
+done
